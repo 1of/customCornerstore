@@ -1,6 +1,9 @@
 {
     "header": {
-        "welcome_back": "Welcome back, {name}"
+        "welcome_back": "Welcome back, {name}",
+        "find_store":"Find My Store",
+        "closest_sale":"Closeout Sale",
+        "track_del":"Track Delivery"
     },
     "footer": {
         "brands": "Popular Brands",

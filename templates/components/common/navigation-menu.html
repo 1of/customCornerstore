@@ -21,6 +21,26 @@
              {{/each}}
         {{/unless}}
     </ul>
+    <li class="navUser-item">
+        <a class="navUser-action navUser-action--quickSearch" href="#" data-search="quickSearch" aria-controls="quickSearch" aria-expanded="false">{{lang 'common.search'}}</a>
+    </li>
+    <div class="dropdown dropdown--quickSearch" id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
+        {{> components/common/quick-search}}
+    </div>
+    <ul>
+        <li class="navUser-item navUser-item--cart">
+            <a
+                    class="navUser-action"
+                    data-cart-preview
+                    data-dropdown="cart-preview-dropdown"
+                    data-options="align:right"
+                    href="{{urls.cart}}">
+                <span class="navUser-item-cartLabel">{{lang 'common.cart'}}</span> <span class="countPill cart-quantity"></span>
+            </a>
+
+            <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+        </li>
+    </ul>
     <ul class="navPages-list navPages-list--user">
         {{#if currency_selector.currencies.length '>' 1}}
             <li class="navPages-item">

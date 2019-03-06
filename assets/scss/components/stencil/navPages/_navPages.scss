@@ -454,3 +454,14 @@
         }
     }
 }
+
+//
+// Cart Item in NavMenu
+// --
+
+.navUser-item--cart {
+	.navUser-action {
+		padding: 17px;
+		background: url("../img/backet.png") center center no-repeat;
+	}
+}

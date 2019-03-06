@@ -17,7 +17,12 @@
 
         {{ getFontsCollection }}
         {{{stylesheet '/assets/css/theme.css'}}}
-
+        <style type="text/css" media="screen, print">
+            @font-face {
+                font-family: "Proxima-Nova";
+                src: url("{{cdn 'webdav:Proxima-Nova-Regular.ttf'}}");
+            }
+        </style>
         {{{head.scripts}}}
         {{{head.rsslinks}}}
 

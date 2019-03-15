@@ -807,7 +807,7 @@
     "search": {
         "quick_search": {
             "input_label": "Search",
-            "input_placeholder": "Search the store"
+            "input_placeholder": "Find a better sleep here"
         },
         "results": {
             "form_label": "Search Keyword:",

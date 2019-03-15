@@ -20,12 +20,12 @@
     @include nav($style: "navBar", $wrapper: "nav");
     @include verticalPositionMiddle("absolute");
     right: 0;
-    top: -26px; // 2
+    top: 0; // 2
     width: 100%; // 4
     z-index: zIndex("lowest"); // 5.
 
     @include breakpoint("medium") {
-        padding: 0 spacing("single");
+        padding: 4px spacing("single");
         position: relative;
         right: auto;
         top: auto;
@@ -323,16 +323,19 @@
 
 .countPill {
     background-color: stencilColor("navUser-indicator-backgroundColor");
-    border-radius: 50%;
-    color: color("whites", "bright");
-    display: none;
+    border-radius: 2px;
+    color: stencilColor("navPages-color");
+    display: block;
     font-size: fontSize("tiny");
     font-weight: fontWeight("bold");
-    height: 20px; // 1
-    line-height: 20px; // 1
+    height: 18px; // 1
+    line-height: 18px; // 1
     margin-left: spacing("eighth");
     text-align: center;
-    width: 20px; // 1
+    width: 18px; // 1
+	position: absolute;
+	top: -6px;
+	right: -9px;
 }
 
 .countPill--positive {
@@ -362,6 +365,11 @@
 		-webkit-box-pack: space-between;
 		max-width: 1280px;
 		margin: 0 auto;
+		padding: 0 20px;
+		
+		.navUser-section--alt {
+			margin-left: 0;
+		}
 		
 		.navUser-section--alt-left {
 			flex-grow: 1;
@@ -397,17 +405,19 @@
 	}
 	
 	.navUser-item {
-		padding: spacing("base") spacing("base")*2;
+		padding: spacing("base") 0 spacing("base") spacing("base")*2;
 	}
 	
 	.txt-bold {
+		font-size: 13px;
 		font-weight: 700;
 	}
 	.txt-underlined {
 		text-decoration: underline;
+		font-size: 13px;
 	}
 	.txt-smaller {
-		font-size: $fontSize-tiny;
+		font-size: 11px;
 		position: relative;
 	}
 	.navUser-item--account {

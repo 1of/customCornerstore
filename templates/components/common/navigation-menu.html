@@ -2,21 +2,34 @@
     <div class="navPages-quickSearch">
         {{> components/common/quick-search}}
     </div>
+    {{#if page_type '===' 'default'}}
+    <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
+        {{> components/common/store-logo}}
+    </h1>
+    {{else}}
+    <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+        {{> components/common/store-logo}}
+    </div>
+    {{/if}}
     <ul class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
         {{#each categories}}
-            <li class="navPages-item">
+
+            <!--Temporary Disable category-->
+            <!--<li class="navPages-item">-->
             {{#if ../theme_settings.navigation_design '===' 'simple'}}
                 {{> components/common/navigation-list}}
             {{/if}}
             {{#if ../theme_settings.navigation_design '===' 'alternate'}}
                 {{> components/common/navigation-list-alternate}}
             {{/if}}
-            </li>
+            <!--</li>-->
         {{/each}}
         {{#unless theme_settings.hide_content_navigation}}
             {{#each pages}}
                  <li class="navPages-item navPages-item-page">
-                     <a class="navPages-action{{#if name '==' ../page.title}} activePage{{/if}}" href="{{url}}">{{name}}</a>
+                     <a class="navPages-action{{#if name '==' ../page.title}} activePage{{/if}}" href="{{url}}">
+                         <span class="navPages-underline-item">{{name}}</span>
+                     </a>
                  </li>
              {{/each}}
         {{/unless}}
@@ -24,10 +37,24 @@
     <li class="navUser-item">
         <a class="navUser-action navUser-action--quickSearch" href="#" data-search="quickSearch" aria-controls="quickSearch" aria-expanded="false">{{lang 'common.search'}}</a>
     </li>
-    <div class="dropdown dropdown--quickSearch" id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
-        {{> components/common/quick-search}}
+    <div class="search-container">
+        {{{ snippet "forms_search"}}}
+        <form class="form" action="{{urls.search}}">
+            <fieldset class="form-fieldset">
+                <div class="form-field">
+                    <label class="is-srOnly" for="search_query">{{lang "search.quick_search.input_label"}}</label>
+                    <input class="form-input" data-search-quick name="search_query" id="search_query" data-error-message="{{lang 'search.error.empty_field'}}" placeholder="{{lang 'search.quick_search.input_placeholder'}}" autocomplete="off">
+                    <span class="search-button-wrapper" data-role="search-button-wrapper">
+                        <svg width="16" height="16" viewBox="0 0 40 40" fill="#fff" xmlns="http://www.w3.org/2000/svg" class="search-ico">
+                            <path d="M15.553 31.107c8.59 0 15.554-6.964 15.554-15.554S24.143 0 15.553 0 0 6.964 0 15.553c0 8.59 6.964 15.554 15.553 15.554zm0-3.888c6.443 0 11.666-5.225 11.666-11.668 0-6.442-5.225-11.665-11.668-11.665-6.442 0-11.665 5.223-11.665 11.665 0 6.443 5.223 11.666 11.665 11.666zm12.21 3.84a2.005 2.005 0 0 1 .002-2.833l.463-.463a2.008 2.008 0 0 1 2.833-.003l8.17 8.168c.78.78.78 2.05-.004 2.833l-.462.463a2.008 2.008 0 0 1-2.834.004l-8.168-8.17z" fill-rule="evenodd"></path>
+                        </svg>
+                </span>
+                </div>
+            </fieldset>
+        </form>
+        <section class="quickSearchResults" data-bind="html: results"></section>
     </div>
-    <ul>
+    <ul class="navUser-item--cartBox">
         <li class="navUser-item navUser-item--cart">
             <a
                     class="navUser-action"

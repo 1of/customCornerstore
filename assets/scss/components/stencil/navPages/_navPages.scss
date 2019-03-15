@@ -57,7 +57,7 @@
 
     &.is-open {
         display: block;
-        padding-top: $header-height;
+        padding-top: 0;
         z-index: 0;
     }
 }
@@ -84,6 +84,10 @@
 
     ul {
         list-style: none;
+	    
+	    &.navPages-list {
+		    margin-top: 5px;
+	    }
     }
 
     .navPage-subMenu-list {
@@ -196,7 +200,8 @@
 
     @include breakpoint("medium") {
         display: inline-block;
-        padding: spacing("half") (spacing("half") + spacing("quarter")) (spacing("half") + spacing("quarter"));
+        padding: 10px;
+	    margin: 0 10px;
 
         &.is-open {
             background-color: stencilColor("navPages-subMenu-backgroundColor");
@@ -217,6 +222,10 @@
             fill: stencilColor("navPages-color-hover");
             stroke: stencilColor("navPages-color-hover");
         }
+	    
+	    .navPages-underline-item {
+		    border-bottom-color: stencilColor("navUser-indicator-backgroundColor");
+	    }
     }
 
     svg {
@@ -456,12 +465,68 @@
 }
 
 //
-// Cart Item in NavMenu
-// --
+// Header Search
+// -----------------------------------------------------------------------------
 
-.navUser-item--cart {
-	.navUser-action {
-		padding: 17px;
-		background: url("../img/backet.png") center center no-repeat;
+.search-container {
+	height: 40px;
+	
+	.form-field {
+		position: relative;
+	}
+	
+	.form-input {
+		border: 1px solid #878b8c;
+		border-radius: 25px;
+		font-size: 12px;
+		height: 40px;
+		padding: 0 50px 0 25px;
+		
+		&::placeholder{
+			color: #575757;
+		}
+		
+		@include breakpoint("medium") {
+			width: 210px;
+		}
+		
+		@include breakpoint("large") {
+			width: 335px;
+			font-size: 15px;
+		}
+	}
+	
+	.search-button-wrapper {
+		background: #878b8c;
+		border-radius: 50%;
+		position: absolute;
+		top: 4px;
+		right: 4px;
+		width: 32px;
+		height: 32px;
+	}
+	
+	.search-ico {
+		position: absolute;
+		top: 7px;
+		right: 7px;
+	}
+}
+
+//
+// Header Nav Items
+// -----------------------------------------------------------------------------
+
+.navPages-underline-item {
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: transparent;
+	padding-bottom: 3px;
+	font-size: 10px;
+	letter-spacing: -0.5px;
+	text-transform: capitalize;
+	
+	@include breakpoint("large") {
+		font-size: 19px;
 	}
 }

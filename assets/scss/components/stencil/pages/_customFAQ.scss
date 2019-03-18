@@ -1,0 +1,91 @@
+// =============================================================================
+// FAQ Page (CSS)
+// =============================================================================
+//
+// -----------------------------------------------------------------------------
+
+.faq-page {
+	color: #333;
+	font-family: "Proxima-Nova-Regular";
+	font-size: 16px;
+	line-height: 1.1;
+	
+	.page-title {
+		font: 300 40px "ErnestineWebProRegular";
+		line-height: 1.1;
+		margin-bottom: 40px;
+	}
+	
+	.page-content--centered {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	h4 {
+		color: #4f5253;
+		text-decoration: underline;
+		text-transform: uppercase;
+		font: 700 20px "ErnestineWebProRegular", Arial, Helvetica, sans-serif;
+		margin: 2rem 0;
+	}
+	
+	.accordion-item-title {
+		cursor: pointer;
+		font-size: 19px;
+		line-height: 1.4;
+		margin: 0 0 10px;
+		outline: none;
+		
+		p {
+			padding: 0 0 40px;
+		}
+		
+		&::after {
+			display: inline-block;
+			margin: 5px 0 0 10px;
+			vertical-align: top;
+			width: 11px;
+			height: 11px;
+			border-width: 2px;
+			border-style: solid;
+			border-right-color: #333;
+			border-bottom-color: #333;
+			border-top-color: transparent;
+			border-left-color: transparent;
+			border-radius: 2px;
+			content: '';
+			transform: rotate(45deg);
+		}
+		
+		&.ui-state-active::after {
+			border-right-color: transparent;
+			border-bottom-color: transparent;
+			border-top-color: #333;
+			border-left-color: #333;
+			margin-top: 10px;
+		}
+		
+		:focus, &.ui-state-active:focus {
+			outline: none;
+		}
+	}
+	
+	.accordion-item-content {
+		padding-bottom: 40px;
+		
+		a {
+			color: #002f59;
+			text-decoration: none;
+			
+			&:hover {
+				color: #006bb4;
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	>p {
+		margin: 0;
+	}
+}

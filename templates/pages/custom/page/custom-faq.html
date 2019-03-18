@@ -1,29 +1,115 @@
 {{#partial "page"}}
-
-<main class="page">
-    <section class="page-content page-content--centered">
-
-        <p><strong>Please click on a question to expand the answer.</strong></p>
-        <h4><span style="text-decoration: underline;">Store Information</span></h4>
-        <div id="faq-accordion" class="faq-container" role="tablist">
-            <div data-role="collapsible" role="tab" data-collapsible="true" aria-selected="false" aria-expanded="false" class="allow">
-                <div data-role="trigger" tabindex="0"><span>What is the address or phone number for my local store?</span></div>
-            </div>
-            <div data-role="content" role="tabpanel" aria-hidden="true" style="display: none;" class="">Please visit our <a href="https://www.sleepoutfitters.com/find-store.html">Find a Store</a> page or you can contact our Concierge Department at <a href="tel:8888890028">888-889-0028</a>.</div>
-            <div data-role="collapsible" role="tab" data-collapsible="true" aria-selected="false" aria-expanded="false" class="">
-                <div data-role="trigger" tabindex="0"><span>What are your store hours?</span></div>
-            </div>
-            <div data-role="content" role="tabpanel" aria-hidden="true" style="display: none;">See our <a href="https://www.sleepoutfitters.com/find-store.html">Find a Store</a> page for most up-to-date store hours.</div>
-            <div data-role="collapsible" role="tab" data-collapsible="true" aria-selected="false" aria-expanded="false">
-                <div data-role="trigger" tabindex="0"><span>Can I view mattresses from online in a real location?</span></div>
-            </div>
-            <div data-role="content" role="tabpanel" aria-hidden="true" style="display: none;">Yes, you can view the mattresses online in our retail locations. Availability may vary by store, so please contact the store to verify the mattress is available on your <a href="https://www.sleepoutfitters.com/find-store.html">local showroom</a>.</div>
-            <div data-role="collapsible" role="tab" data-collapsible="true" aria-selected="false" aria-expanded="false">
-                <div data-role="trigger" tabindex="0"><span>I have a complaint about my local store, who should I speak to?</span></div>
-            </div>
-            <div data-role="content" role="tabpanel" aria-hidden="true" style="display: none;">Please contact customer service at <a href="tel:8666373778">866-637-3778</a> or <a href="mailto:customerservice@sleeponthebest.com">customerservice@sleeponthebest.com</a>.</div>
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<main class="faq-page">
+    <h1 class="page-title">
+        <span class="base">FAQs</span>    </h1>
+    <p><strong>Please click on a question to expand the answer.</strong></p>
+    <h4>Store Information</h4>
+    <section class="page-content page-content--centered" id="accordion">
+       <h3 class="accordion-item-title">What is the address or phone number for my local store?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Please visit our <a href="https://www.sleepoutfitters.com/find-store.html">Find a Store</a> page or you can contact our Concierge Department at <a href="tel:8888890028">888-889-0028</a>.
+            </p>
         </div>
+        <h3 class="accordion-item-title">What are your store hours?</h3>
+        <div>
+            <p class="accordion-item-content">
+                See our Find a Store page for most up-to-date store hours.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">Can I view mattresses from online in a real location?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Yes, you can view the mattresses online in our retail locations. Availability may vary by store, so please contact the store to verify the mattress is available on your <a href="https://www.sleepoutfitters.com/find-store.html">local showroom</a>.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">I have a complaint about my local store, who should I speak to?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Please contact customer service at <a href="tel:8666373778">866-637-3778</a> or <a href="mailto:customerservice@sleeponthebest.com">customerservice@sleeponthebest.com</a>.
+            </p>
+        </div>
+    </section>
 
+    <h4>Types of Mattresses</h4>
+    <section class="page-content page-content--centered" id="accordion2">
+         <h3 class="accordion-item-title">What is the address or phone number for my local store?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Please visit our <a href="https://www.sleepoutfitters.com/find-store.html">Find a Store</a> page or you can contact our Concierge Department at <a href="tel:8888890028">888-889-0028</a>.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">What are your store hours?</h3>
+        <div>
+            <p class="accordion-item-content">
+                See our Find a Store page for most up-to-date store hours.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">Can I view mattresses from online in a real location?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Yes, you can view the mattresses online in our retail locations. Availability may vary by store, so please contact the store to verify the mattress is available on your <a href="https://www.sleepoutfitters.com/find-store.html">local showroom</a>.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">I have a complaint about my local store, who should I speak to?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Please contact customer service at <a href="tel:8666373778">866-637-3778</a> or <a href="mailto:customerservice@sleeponthebest.com">customerservice@sleeponthebest.com</a>.
+            </p>
+        </div>
+    </section>
+
+    <h4>Types of Mattresses</h4>
+    <section class="page-content page-content--centered" id="accordion3">
+        <h3 class="accordion-item-title">What is the address or phone number for my local store?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Please visit our <a href="https://www.sleepoutfitters.com/find-store.html">Find a Store</a> page or you can contact our Concierge Department at <a href="tel:8888890028">888-889-0028</a>.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">What is the address or phone number for my local store?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Please visit our <a href="https://www.sleepoutfitters.com/find-store.html">Find a Store</a> page or you can contact our Concierge Department at <a href="tel:8888890028">888-889-0028</a>.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">What is the address or phone number for my local store?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Please visit our <a href="https://www.sleepoutfitters.com/find-store.html">Find a Store</a> page or you can contact our Concierge Department at <a href="tel:8888890028">888-889-0028</a>.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">What is the address or phone number for my local store?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Please visit our <a href="https://www.sleepoutfitters.com/find-store.html">Find a Store</a> page or you can contact our Concierge Department at <a href="tel:8888890028">888-889-0028</a>.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">What is the address or phone number for my local store?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Please visit our <a href="https://www.sleepoutfitters.com/find-store.html">Find a Store</a> page or you can contact our Concierge Department at <a href="tel:8888890028">888-889-0028</a>.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">What are your store hours?</h3>
+        <div>
+            <p class="accordion-item-content">
+                See our Find a Store page for most up-to-date store hours.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">Can I view mattresses from online in a real location?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Yes, you can view the mattresses online in our retail locations. Availability may vary by store, so please contact the store to verify the mattress is available on your <a href="https://www.sleepoutfitters.com/find-store.html">local showroom</a>.
+            </p>
+        </div>
+        <h3 class="accordion-item-title">I have a complaint about my local store, who should I speak to?</h3>
+        <div>
+            <p class="accordion-item-content">
+                Please contact customer service at <a href="tel:8666373778">866-637-3778</a> or <a href="mailto:customerservice@sleeponthebest.com">customerservice@sleeponthebest.com</a>.
+            </p>
+        </div>
     </section>
 </main>
 

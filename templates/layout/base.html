@@ -20,7 +20,15 @@
         <style type="text/css" media="screen, print">
             @font-face {
                 font-family: "Proxima-Nova-Regular";
-                src: url("{{cdn 'webdav:Proxima-Nova-Regular.woff2'}}");
+                src: url("{{cdn 'webdav:Proxima-Nova-Regular.woff2'}}"), format('woff2');
+            }
+        </style>
+        <style type="text/css" media="screen, print">
+            @font-face {
+                font-family: "ErnestineWebProRegular";
+                src: url("{{cdn 'webdav:Ernestine-regular.woff2'}}"), format('woff2');
+                font-weight: 400;
+                font-style: normal;
             }
         </style>
         {{{head.scripts}}}

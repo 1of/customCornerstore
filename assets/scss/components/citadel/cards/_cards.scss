@@ -15,6 +15,7 @@
 .card-figure {
     margin-top: $card-figure-marginTop;
     position: relative;
+	border: 1px solid #c8cdce;
     &:hover {
 
         // scss-lint:disable NestingDepth
@@ -26,7 +27,7 @@
 
 .card-img-container {
     max-width: get-width(stencilString('productgallery_size'));
-
+	max-height: 200px;
     @include lazy-loaded-padding('productgallery_size');
 }
 
@@ -95,10 +96,38 @@
 
 .card-body {
     text-align: center;
+	padding-top: 14px;
+	
+	.card-title {
+		height: 38px;
+		margin-bottom: 10px;
+		a{
+			font-size: 16px;
+			line-height: 19px;
+			margin: 0 0 10px;
+			font-family: 'Proxima-Nova-Regular';
+			text-transform: capitalize;
+		}
+	}
+	
+	.card-text.brand-name {
+		height: 17px;
+		color: #878b8c;
+		font-family: 'Proxima-Nova-Bold';
+		font-size: 12px;
+		margin-bottom: 0;
+		line-height: 1.9;
+	}
+	.card-text {
+		color: #004a8d;
+		height: 57px;
+		font: 600 16px 'Proxima-Nova-Bold';
+	}
 
     @include breakpoint("small") {
         text-align: left;
     }
+	
 }
 
 
@@ -120,6 +149,7 @@
         @include breakpoint("small") {
             padding: spacing("single");
         }
+	    
     }
 
     &:hover {
@@ -139,3 +169,160 @@
         }
     }
 }
+
+//
+// Compare checkbox
+//
+//
+// -----------------------------------------------------------------------------
+
+/* The container */
+.card-figcaption-button {
+	display: inline-block;
+	position: relative;
+	padding-left: 26px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 12px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color: #004a8d;
+	
+	/* Hide the browser's default checkbox */
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+	
+	/* Create a custom checkbox */
+	.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 19px;
+		width: 19px;
+		border-style: solid;
+		border-width: 2px;
+		border-color: #ccc;
+	}
+	
+	/* Create the checkmark/indicator (hidden when not checked) */
+	.checkmark:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+	&:hover {
+		text-decoration: underline;
+		color: #004a8d;
+		
+		/* On mouse-over, add a grey background color */
+		input ~ .checkmark {
+			background-color: #eee;
+			border-color: #ccc;
+		}
+	}
+	
+	
+	input:checked ~ .checkmark {
+		background-color: #004a8d;
+		border-color: #004a8d;
+	}
+	
+	/* Style the checkmark/indicator */
+	.checkmark:after {
+		left: 5px;
+		top: 1px;
+		width: 6px;
+		height: 12px;
+		border: solid white;
+		border-width: 0 2px 2px 0;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	
+	/* Show the checkmark when checked */
+	input:checked ~ .checkmark:after {
+		display: block;
+	}
+}
+
+.tocart-container {
+	display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	justify-content: space-between;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	
+	.add-to-cart-btn {
+		background: $color-yellow;
+		border-radius: 50px;
+		color: $color-dark-blue;
+		font-size: 12px;
+		font-family: "Proxima-Nova-Bold";
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 12px 5px;
+		
+		@include breakpoint("medium") {
+			padding: 12px 16px;
+			font-size: 10px;
+		}
+		@include breakpoint("large") {
+			padding: 12px 44px;
+			font-size: 12px;
+		}
+
+		
+		&:hover {
+			color: $color-dark-blue;
+			background: #ffe980;
+		}
+	}
+	
+	.free-delivery {
+		height: 17px;
+		font-size: 12px;
+		margin-bottom: 17px;
+	}
+	.add-to-wish-list {
+		display: inline-block;
+		margin: auto 0;
+		svg{
+			width: 17px;
+			height: 16px;
+			fill: #4f5253;
+			:hover {
+				fill: $color-dark-blue;
+			}
+		}
+	}
+}
+
+.show-sale-label {
+	position: absolute;
+	right: -10px;
+	top: 10px;
+	>.text {
+		color: $color-white;
+		font: 600 12px 'ErnestineWebProRegular';
+		text-transform: uppercase;
+		position: absolute;
+		right: 10px;
+		line-height: 2;
+		
+	}
+}
+
+

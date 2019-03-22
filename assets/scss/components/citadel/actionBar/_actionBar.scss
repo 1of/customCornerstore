@@ -7,29 +7,29 @@
 
     .form-field {
         background-color: $input-bg-color;
-        border: $actionBar-form-field-border;
-        border-radius: $actionBar-form-field-radius;
         overflow: hidden;
+	    margin-bottom: 0;
 
         // scss-lint:disable NestingDepth
-        &:hover {
-            border-color: stencilColor("input-border-color-active");
-        }
         // scss-lint:enable NestingDepth
     }
 
     .form-label {
-        color: $actionBar-form-label-color;
+	    color: #252525;
         font-size: $actionBar-form-label-fontSize;
         line-height: $actionBar-form-label-lineHeight;
         margin-bottom: 0;
         padding-left: $actionBar-form-label-padding;
+	    text-transform: uppercase;
     }
 
     .form-input,
     .form-select {
-        border: 0;
+	    color: #c8cdce;
+	    border: $actionBar-form-field-border;
         padding-left: $actionBar-form-input-padding;
+	    border-color: #c8cdce;
+	    border-radius: 50px;
         width: auto;
     }
 
@@ -40,7 +40,12 @@
     }
 
     .form-select {
-        color: stencilColor("color-textLink");
+	    color: #c8cdce;
         height: $input-small-height - remCalc($input-border-width * 2);
+	    padding-left: 10px;
     }
+
+	@include breakpoint("small") {
+		float: right;
+	}
 }

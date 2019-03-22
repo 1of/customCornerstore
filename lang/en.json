@@ -152,7 +152,7 @@
         "sign_up": "Register",
         "login": "Sign in",
         "logout": "Sign out",
-        "account": "Account",
+        "account": "My Account",
         "cart": "Cart",
         "search": "Search",
         "gift_cert": "Gift Certificates",
@@ -171,7 +171,7 @@
         "next": "Next",
         "sorter": {
             "relevance": "Relevance",
-            "sort_by": "Sort By:",
+            "sort_by": "Sort By",
             "featured": "Featured Items",
             "top_sellers": "Best Selling",
             "newest": "Newest Items",

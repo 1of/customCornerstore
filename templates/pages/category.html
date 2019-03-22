@@ -17,12 +17,8 @@ category:
 {{#partial "page"}}
 
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-{{#if category.image}}
-    <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage category.image 'zoom_size'}}">
-{{/if}}
-{{#unless theme_settings.hide_category_page_heading }}
-    <h1 class="page-heading">{{category.name}}</h1>
-{{/unless}}
+
+
 {{{category.description}}}
 {{{snippet 'categories'}}}
 <div class="page">
@@ -37,12 +33,19 @@ category:
     {{else if category.shop_by_price}}
         {{#if theme_settings.shop_by_price_visibility}}
              <aside class="page-sidebar" id="faceted-search-container">
-                {{> components/category/sidebar}}
+                 {{#unless theme_settings.hide_category_page_heading }}
+                 <h1 class="page-heading">{{category.name}}</h1>
+                 {{/unless}}
+                 {{> components/category/aside-search}}
+                 {{> components/category/sidebar}}
             </aside>
         {{/if}}
     {{/if}}
 
     <main class="page-content" id="product-listing-container">
+        {{#if category.image}}
+        <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage category.image 'zoom_size'}}">
+        {{/if}}
         {{#if category.products}}
             {{> components/category/product-listing}}
         {{else}}

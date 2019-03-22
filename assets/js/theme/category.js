@@ -13,6 +13,7 @@ export default class Category extends CatalogPage {
             this.onSortBySubmit = this.onSortBySubmit.bind(this);
             hooks.on('sortBy-submitted', this.onSortBySubmit);
         }
+        console.log(this.facetedSearch);
     }
 
     initFacetedSearch() {

@@ -1,0 +1,83 @@
+// =============================================================================
+// Aside search (CSS)
+// =============================================================================
+//
+// -----------------------------------------------------------------------------
+
+.instant-search-bar-wrapper {
+	display: inline-block;
+	position: relative;
+	width: 90%;
+	margin: 0 4% 24px;
+}
+
+/* Style the search field */
+form.aside-search-bar {
+	input[type=search] {
+		border: 1px solid grey;
+		border-radius: 15px;
+		font-size: 11px;
+		height: 30px;
+		padding-left: 19px;
+		padding-right: 100px;
+		padding-top: 0;
+		outline: none;
+		width: 56%;
+	}
+	
+	button {
+		position: absolute;
+		right: -3px;
+		top: 8px;
+		svg{
+			float: left;
+			fill: #4f5253;
+			height: 13px;
+			stroke: #4f5253;
+			width: 13px;
+			cursor: pointer;
+		}
+	}
+	
+	&::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}
+
+aside.page-sidebar {
+
+	@include breakpoint("medium") {
+		width: 25%;
+	}
+	
+	.page-heading {
+		margin-bottom: 10px;
+		text-align: left;
+		text-transform: uppercase;
+		font-size: 24px;
+	}
+	
+	nav {
+		border: 1px solid #c8cdce;
+		
+		>.sidebarBlock {
+			padding: 18px;
+			
+			.sidebarBlock-heading {
+				cursor: pointer;
+				font-family: 'ErnestineWebProRegular';
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.page-sidebar + main.page-content{
+	@include breakpoint("medium") {
+		width: 75%;
+		padding-left: 0.3rem;
+	}
+}

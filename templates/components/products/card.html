@@ -1,4 +1,12 @@
 <article class="card {{#if alternate}}card--alternate{{/if}}" {{#if settings.data_tag_enabled}} data-event-type="{{event}}" data-entity-id="{{id}}" data-position="{{position}}" data-name="{{name}}" data-product-category="{{#each category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{brand.name}}" data-product-price="{{#if price.with_tax}}{{price.with_tax.value}}{{else}}{{price.without_tax.value}}{{/if}}"  {{/if}}>
+
+{{#if show_compare}}
+<label class=" card-figcaption-button" for="compare-{{id}}">
+    <input type="checkbox" name="products[]" value="{{id}}" id="compare-{{id}}" data-compare-id="{{id}}">
+    <span class="checkmark"></span>
+    {{lang 'products.compare'}}
+</label>
+{{/if}}
     <figure class="card-figure">
         {{#or price.non_sale_price_with_tax price.non_sale_price_without_tax}}
             {{#if theme_settings.product_sale_badges '===' 'sash'}}
@@ -40,11 +48,6 @@
                         {{/unless}}
                     {{/if}}
                 {{/unless}}
-                {{#if show_compare}}
-                    <label class="button button--small card-figcaption-button" for="compare-{{id}}">
-                        {{lang 'products.compare'}} <input type="checkbox" name="products[]" value="{{id}}" id="compare-{{id}}" data-compare-id="{{id}}">
-                    </label>
-                {{/if}}
                 {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
                     {{#if show_cart_action}}
                         {{#if has_options}}
@@ -53,9 +56,6 @@
                         {{#if pre_order}}
                             <a href="{{pre_order_add_to_cart_url}}" data-event-type="product-click" class="button button--small card-figcaption-button">{{lang 'products.pre_order'}}</a>
                         {{/if}}
-                        {{#if add_to_cart_url }}
-                            <a href="{{add_to_cart_url}}" data-event-type="product-click" class="button button--small card-figcaption-button">{{lang 'products.add_to_cart'}}</a>
-                        {{/if}}
                         {{#if out_of_stock_message }}
                             <a href="{{url}}" data-event-type="product-click" class="button button--small card-figcaption-button" data-product-id="{{id}}">{{out_of_stock_message}}</a>
                         {{/if}}
@@ -63,8 +63,16 @@
                 {{/or}}
             </div>
         </figcaption>
+
+        {{#if price.sale_price_without_tax}}
+            <span class="show-sale-label">
+                    <span class="text">Sale</span>
+                <img src="{{cdn 'assets/img/sale-label.png'}}" alt="Sale">
+            </span>
+        {{/if}}
     </figure>
     <div class="card-body">
+        {{log add_to_wishlist_url}}
         {{#and rating show_rating}}
             <p class="card-text" data-test-info-type="productRating">
                 <span class="rating--small">
@@ -72,9 +80,11 @@
                 </span>
             </p>
         {{/and}}
-        {{#if brand.name}}
-            <p class="card-text" data-test-info-type="brandName">{{brand.name}}</p>
-        {{/if}}
+            <p class="card-text brand-name" data-test-info-type="brandName">
+                {{#if brand.name}}
+                    {{brand.name}}
+                {{/if}}
+            </p>
         <h4 class="card-title">
             {{#if demo}}
                 {{name}}
@@ -85,10 +95,19 @@
 
         <div class="card-text" data-test-info-type="price">
             {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                {{> components/products/price price=price}}
+            {{> components/products/price price=price}}
             {{else}}
                 {{> components/common/login-for-pricing}}
             {{/or}}
+        </div>
+        <p class="free-delivery">Free Delivery!</p>
+        <div class="tocart-container">
+            {{#if add_to_cart_url }}
+            <a href="{{add_to_cart_url}}" data-event-type="product-click" class="add-to-cart-btn">{{lang 'products.add_to_cart'}}</a>
+            <a href="{{add_to_wishlist_url}}" class="add-to-wish-list">
+                <svg><use xlink:href="#icon-black-heart" /></svg>
+            </a>
+            {{/if}}
         </div>
         {{> components/products/bulk-discount-rates}}
     </div>

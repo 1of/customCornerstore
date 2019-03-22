@@ -44,9 +44,16 @@
         {{/if}}
         <li class="navUser-item navUser-item--account desktop-view">
             {{#if customer}}
-                <a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a>
 
-                <a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+            <div class="account-menu-dropdown">
+                <button class="dropbtn">{{lang 'common.account'}}</button>
+                <div class="dropdown-content">
+                    <div class="transparent-box"></div>
+                    <a class="account-with-arrow" href="{{urls.account.index}}">{{lang 'common.account'}}</a>
+                    <a class="" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+                </div>
+            </div>
+
             {{else}}
                 <a class="navUser-action txt-smaller" href="{{urls.auth.login}}">{{lang 'common.login'}}</a>
                 <!--{{#if settings.account_creation_enabled}}-->
@@ -57,3 +64,7 @@
     </ul>
     </div>
 </nav>
+
+<style>
+
+</style>

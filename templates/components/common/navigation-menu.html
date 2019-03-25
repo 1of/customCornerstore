@@ -13,6 +13,7 @@
     {{/if}}
     <ul class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
         {{#each categories}}
+
             <!--Temporary Disable category-->
 
             {{#if ../theme_settings.navigation_design '===' 'simple'}}
@@ -33,6 +34,7 @@
 
 
         {{/each}}
+        {{log categories}}
         {{#unless theme_settings.hide_content_navigation}}
             {{#each pages}}
                  <li class="navPages-item navPages-item-page">
@@ -63,20 +65,14 @@
         </form>
         <section class="quickSearchResults" data-bind="html: results"></section>
     </div>
-    <ul class="navUser-item--cartBox">
-        <li class="navUser-item navUser-item--cart">
-            <a
-                    class="navUser-action"
-                    data-cart-preview
-                    data-dropdown="cart-preview-dropdown"
-                    data-options="align:right"
-                    href="{{urls.cart}}">
-                <span class="navUser-item-cartLabel">{{lang 'common.cart'}}</span> <span class="countPill cart-quantity"></span>
-            </a>
 
-            <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
-        </li>
-    </ul>
+
+    <!-- !!!!!!!!!!!!!!!!!!! -->
+        <ul class="navUser-section navUser-section--alt">
+
+        </ul>
+
+
     <ul class="navPages-list navPages-list--user">
         {{#if currency_selector.currencies.length '>' 1}}
             <li class="navPages-item">
@@ -172,4 +168,5 @@
             </li>
         {{/if}}
     </ul>
+
 </nav>

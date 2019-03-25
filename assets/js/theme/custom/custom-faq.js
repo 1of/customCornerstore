@@ -10,7 +10,7 @@ export default class CustomPage extends PageManager {
         $('#accordion').accordion({
             active: true, animate: false, collapsible: true, heightStyle: 'auto',
         });
-        $('#accordion2').accordion({ active: true, animate: false, collapsible: true });
-        $('#accordion3').accordion({ active: true, animate: false, collapsible: true });
+        $('#accordion2').accordion({ active: true, animate: false, collapsible: true, heightStyle: 'auto' });
+        $('#accordion3').accordion({ active: true, animate: false, collapsible: true, heightStyle: 'auto' });
     }
 }

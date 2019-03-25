@@ -23,7 +23,23 @@
     {{> components/common/navigation}}
 
     {{{region name="header_bottom"}}}
+
+    <div class="cart-container">
+        <div class="navUser-item navUser-item--cart">
+            <a
+                    class="navUser-action"
+                    data-cart-preview
+                    data-dropdown="cart-preview-dropdown"
+                    data-options="align:right"
+                    href="{{urls.cart}}">
+                <span class="navUser-item-cartLabel">{{!lang 'common.cart'}}</span> <span class="countPill cart-quantity"></span>
+            </a>
+            <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+
+        </div>
+    </div>
     <div class="navPages-container" id="menu" data-menu>
         {{> components/common/navigation-menu}}
     </div>
+
 </header>

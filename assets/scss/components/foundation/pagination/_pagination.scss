@@ -99,11 +99,21 @@
 }
 
 .pagination-item--previous {
-    float: left;
+	margin-right: spacing("single");
 
     .icon {
         margin-left: -(remCalc(12px));
     }
+	
+	> a.pagination-link {
+		
+		.icon {
+			height: 28px;
+			width: 28px;
+			margin-right: 0;
+			margin-left: 0;
+		}
+	}
 }
 
 .pagination-item--next {

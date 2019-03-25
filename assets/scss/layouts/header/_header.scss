@@ -260,3 +260,45 @@
 
     }
 }
+
+//
+// Cart button
+//
+//
+// -----------------------------------------------------------------------------
+.header {
+	.cart-container {
+		position: relative;
+		max-width: 1250px;
+		margin: 0 auto;
+		
+		.dropdown-menu {
+			width: 390px;
+			background: $color-white;
+			box-shadow: 0 3px 3px rgba(0,0,0,.15);
+		}
+		
+		.navUser-item--cart {
+			display: none;
+			
+			@include breakpoint("medium") {
+				display: block;
+				position: absolute;
+				right: 0;
+				margin-right: 5%;
+				top: 24px;
+			}
+			
+			@include breakpoint("large") {
+				margin-right: 15px;
+			}
+			
+			a {
+				z-index: 100;
+				margin-bottom: 3px;
+			}
+		}
+	}
+	
+
+}

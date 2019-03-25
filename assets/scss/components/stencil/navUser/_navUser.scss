@@ -494,3 +494,15 @@
 .quickSearchResults .add-to-cart-btn {
 	padding: 12px 12px;
 }
+
+.navUser-item--compare {
+	margin-right: 15px;
+	font-size: 11px;
+	line-height: 2;
+	position: relative;
+	
+	.countPill {
+		top: -12px;
+		right: -12px;
+	}
+}

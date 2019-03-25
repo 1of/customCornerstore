@@ -7,8 +7,9 @@
 .instant-search-bar-wrapper {
 	display: inline-block;
 	position: relative;
-	width: 90%;
 	margin: 0 4% 24px;
+	width: 84%;
+	
 }
 
 /* Style the search field */
@@ -19,16 +20,18 @@ form.aside-search-bar {
 		font-size: 11px;
 		height: 30px;
 		padding-left: 19px;
-		padding-right: 100px;
+		padding-right: 10px;
 		padding-top: 0;
 		outline: none;
-		width: 56%;
+		width: 100%;
+		
 	}
 	
 	button {
 		position: absolute;
-		right: -3px;
+		right: -28px;
 		top: 8px;
+		
 		svg{
 			float: left;
 			fill: #4f5253;

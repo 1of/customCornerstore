@@ -9,6 +9,20 @@
 	font-family: "Proxima-Nova-Regular";
 	font-size: 16px;
 	line-height: 1.1;
+	margin-bottom: 250px;
+	min-height: 1100px;
+	
+	@include breakpoint("small") {
+		min-height: 995px;
+	}
+	@include breakpoint("medium") {
+		min-height: 500px;
+		margin-bottom: 150px;
+	}
+	@include breakpoint("large") {
+		min-height: 900px;
+	}
+
 	
 	.page-title {
 		font: 300 40px "ErnestineWebProRegular";
@@ -88,4 +102,10 @@
 	>p {
 		margin: 0;
 	}
+}
+
+.body .container {
+	.page-content:last-child{
+	
+}
 }

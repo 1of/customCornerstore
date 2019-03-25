@@ -290,11 +290,7 @@
 		}
 	}
 	
-	.free-delivery {
-		height: 17px;
-		font-size: 12px;
-		margin-bottom: 17px;
-	}
+
 	.add-to-wish-list {
 		display: inline-block;
 		margin: auto 0;
@@ -308,7 +304,12 @@
 		}
 	}
 }
-
+.free-delivery {
+	height: 17px;
+	font-family: "Proxima-Nova-Regular";
+	font-size: 12px;
+	margin-bottom: 17px;
+}
 .show-sale-label {
 	position: absolute;
 	right: -10px;

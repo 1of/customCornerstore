@@ -13,16 +13,25 @@
     {{/if}}
     <ul class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
         {{#each categories}}
-
             <!--Temporary Disable category-->
-            <!--<li class="navPages-item">-->
+
             {{#if ../theme_settings.navigation_design '===' 'simple'}}
-                {{> components/common/navigation-list}}
+                {{#if name '==' 'Shop All'}}
+                    <li class="navPages-item">
+                        {{> components/common/navigation-list}}
+                    </li>
+                {{/if}}
+                {{#if name '==' 'Utility'}}
+                <li class="navPages-item">
+                    {{> components/common/navigation-list}}
+                </li>
+                {{/if}}
             {{/if}}
             {{#if ../theme_settings.navigation_design '===' 'alternate'}}
                 {{> components/common/navigation-list-alternate}}
             {{/if}}
-            <!--</li>-->
+
+
         {{/each}}
         {{#unless theme_settings.hide_content_navigation}}
             {{#each pages}}

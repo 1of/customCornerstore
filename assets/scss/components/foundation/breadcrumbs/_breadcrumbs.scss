@@ -21,6 +21,7 @@
     @include breakpoint("small") {
         display: block; // 1
     }
+	
 }
 
 .breadcrumb {
@@ -35,6 +36,11 @@
 	        color: #252525;
         }
     }
+	
+	&:before {
+		content: '›';
+		font-size: 20px;
+	}
 }
 
 .breadcrumb-label {

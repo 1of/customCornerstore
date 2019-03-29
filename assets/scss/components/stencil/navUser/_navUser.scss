@@ -409,15 +409,16 @@
 	}
 	
 	.txt-bold {
-		font-size: 13px;
-		font-weight: 700;
+		font-size: 14px;
+		font-family: 'Proxima-Nova-Bold';
 	}
 	.txt-underlined {
 		text-decoration: underline;
-		font-size: 13px;
+		font-size: 14px;
+		font-family: 'Proxima-Nova-Regular';
 	}
 	.txt-smaller {
-		font-size: 11px;
+		font-size: 12px;
 		position: relative;
 	}
 	.navUser-item--account {
@@ -427,7 +428,7 @@
 			background-size: cover;
 			display: inline-block;
 			position: absolute;
-			left: -25px;
+			left: -27px;
 			width: 15px;
 			height: 15px;
 

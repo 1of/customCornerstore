@@ -8,6 +8,10 @@ product:
         limit: {{theme_settings.productpage_related_products_count}}
     similar_by_views:
         limit: {{theme_settings.productpage_similar_by_views_count}}
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+categories:
+    description: true
 ---
 {{#partial "page"}}
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}

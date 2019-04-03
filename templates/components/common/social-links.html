@@ -6,9 +6,17 @@
                     <a class="icon icon--google" href="{{url}}" target="_blank">
                         <svg><use xlink:href="#icon-google" /></svg>
                     </a>
+                {{else if display_name '===' 'pinterest'}}
+                    <a class="icon icon--{{display_name}}" href="{{url}}" target="_blank">
+                        <i class="fa fa-{{display_name}}-p"></i>
+                    </a>
+                {{else if display_name '===' 'youtube'}}
+                    <a class="icon icon--{{display_name}}" href="{{url}}" target="_blank">
+                        <i class="fa fa-{{display_name}}-play"></i>
+                    </a>
                 {{else}}
                     <a class="icon icon--{{display_name}}" href="{{url}}" target="_blank">
-                        <svg><use xlink:href="#icon-{{display_name}}" /></svg>
+                        <i class="fa fa-{{display_name}}"></i>
                     </a>
                 {{/if}}
             </li>

@@ -14,6 +14,9 @@ import carousel from './common/carousel';
 import 'lazysizes';
 import loadingProgressBar from './global/loading-progress-bar';
 import svgInjector from './global/svg-injector';
+import footerAccordion from './global/footerAccordion';
+import urlUtils from './common/url-utils';
+import Url from 'url';
 
 export default class Global extends PageManager {
     onReady() {
@@ -34,5 +37,18 @@ export default class Global extends PageManager {
         maintenanceMode(this.context.maintenanceMode);
         loadingProgressBar();
         svgInjector();
+        footerAccordion();
+        console.log(urlUtils);
+        console.log(Url.parce());
+        $('.add-to-cart-btn').on('click', (event) => {
+
+           // window.location.href = "http://localhost:3004/checkout.php";
+          //event.preventDefault();
+          console.log(urlUtils);
+          console.log(urlUtils.getUrl());
+         // urlUtils.goToUrl('cart.php');
+          //urlUtils.goToUrl();
+
+        });
     }
 }

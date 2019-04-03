@@ -15,6 +15,7 @@ export default class Cart extends PageManager {
             .hide(); // TODO: temporary until roper pulls in his cart components
 
         this.bindEvents();
+
     }
 
     cartUpdate($target) {
@@ -423,5 +424,8 @@ export default class Cart extends PageManager {
 
         // initiate shipping estimator module
         this.shippingEstimator = new ShippingEstimator($('[data-shipping-estimator]'));
+        //$('.cart-actions').click();
+        //window.location.href = "http://localhost:3004/checkout.php";
     }
+
 }

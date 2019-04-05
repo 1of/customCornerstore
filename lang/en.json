@@ -689,10 +689,10 @@
         "warranty": "Warranty Information",
         "reviews": {
             "hide": "Hide Reviews",
-            "new": "Write a Review",
+            "new": "Write the First Review",
             "show": "Show Reviews",
             "header": "{total, plural, =0{0 Reviews} one {# Review} other {# Reviews}}",
-            "link_to_review": "({total, plural, =0{No reviews yet} one {# review} other {# reviews}})",
+            "link_to_review": "{total, plural, =0{No reviews} one {# review} other {# reviews}}",
             "post_on_by": "Posted by { name } on { date }",
             "rating_label": "Rating",
             "select_rating": "Select Rating",

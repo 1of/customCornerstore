@@ -23,6 +23,7 @@
 	@include breakpoint("medium") {
 		padding: 0 $container-padding 20px;
 	}
+	
 }
 
 .footer-info {
@@ -40,7 +41,12 @@
 			text-align: left;
 		}
 	}
-
+	
+	.ui-accordion-content {
+		@include breakpoint("medium") {
+			display: block !important;
+		}
+	}
 }
 
 .footer-info-col {
@@ -458,6 +464,7 @@
 			
 			@include breakpoint("large") {
 				font-size: 15px;
+				flex: -1;
 			}
 			
 			&::-webkit-input-placeholder,
@@ -527,12 +534,5 @@
 				padding-top: 10px;
 			}
 		}
-	}
-}
-
-
-.ui-accordion-content {
-	@include breakpoint("medium") {
-		display: block !important;
 	}
 }

@@ -78,7 +78,9 @@
             </h2>
             <h1 class="productView-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
             <div class="productView-info">
-                <span>In stock</span>
+                {{#if product.availability '===' '' }}
+                <span class="productView-stock">In stock</span>
+                {{/if}}
                 <span class="productView-info-name sku-label"{{#unless product.sku}} style="display: none;"{{/unless}}>{{lang 'products.sku'}}</span>
                 <span class="productView-info-value" data-product-sku>{{product.sku}}</span>
             </div>
@@ -115,6 +117,11 @@
         {{product.detail_messages}}
 
         {{/if}}
+        {{#if product.custom_fields }}
+        <div class="productView-CustomField">
+            {{product.custom_fields.[0].value}}
+        </div>
+        {{/if}}
         <div class="productView-CategoryDesc">
             {{#each categories}}
                 {{#if this.name '===' ../product.category.[1]}}
@@ -123,7 +130,7 @@
             {{/each}}
         </div>
             {{#if product.gift_wrapping_available}}
-                <dt class="productView-info-name">{{lang 'Free delivery'}}</dt>
+                <dt class="productView-info-name-Delivery">{{lang 'Free delivery'}}</dt>
             {{/if}}
             {{#if product.call_for_price}}
             <p class="productView-price">
@@ -211,11 +218,6 @@
                 {{> components/products/bulk-discount-rates bulk_discount_rates=product.bulk_discount_rates}}
             </div>
             {{/if}}
-
-            {{#each product.custom_fields}}
-            <dt class="productView-info-name">{{name}}:</dt>
-            <dd class="productView-info-value">{{{value}}}</dd>
-            {{/each}}
         </dl>
         </div>
     </section>

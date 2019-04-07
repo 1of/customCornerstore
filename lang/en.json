@@ -689,10 +689,10 @@
         "warranty": "Warranty Information",
         "reviews": {
             "hide": "Hide Reviews",
-            "new": "Write a Review",
+            "new": "Write the First Review",
             "show": "Show Reviews",
             "header": "{total, plural, =0{0 Reviews} one {# Review} other {# Reviews}}",
-            "link_to_review": "({total, plural, =0{No reviews yet} one {# review} other {# reviews}})",
+            "link_to_review": "{total, plural, =0{No reviews} one {# review} other {# reviews}}",
             "post_on_by": "Posted by { name } on { date }",
             "rating_label": "Rating",
             "select_rating": "Select Rating",
@@ -787,10 +787,10 @@
         "comments": "Comments"
     },
     "newsletter": {
-        "subscribe": "Subscribe to our newsletter",
+        "subscribe": "Join Our Newsletter",
         "subscribe_intro": "Get the latest updates on new products and upcoming sales",
-        "subscribe_submit": "Subscribe",
-        "email_placeholder": "Your email address",
+        "subscribe_submit": "Join",
+        "email_placeholder": "Email address",
         "subscribed_heading": "Thanks for Subscribing!",
         "subscribed_heading_error": "Oops...",
         "subscribed_message": "Thank you for joining our mailing list. You'll be sent the next issue of our newsletter shortly",

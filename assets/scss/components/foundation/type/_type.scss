@@ -38,6 +38,24 @@ cite {
 .page-heading {
     margin: 0 0 spacing("double");
     text-align: center;
+	color: #4f5253;
+	font-size: 30px;
+	font-weight: 200;
+	text-transform: uppercase;
+	font-family: 'ErnestineWebProRegular';
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	>em {
+		background: #4f5253;
+		display: inline-block;
+		height: 1px;
+		max-width: 34%;
+		width: 100%;
+	}
 }
 
 h1 {

@@ -54,6 +54,7 @@ const pageClasses = {
 
 const customClasses = {
     'pages/custom/page/custom-faq': () => import('./theme/custom/custom-faq'),
+    'pages/product': () => import('./theme/custom/product-fotorama-gallery'),
 };
 
 /**

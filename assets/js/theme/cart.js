@@ -424,4 +424,5 @@ export default class Cart extends PageManager {
         // initiate shipping estimator module
         this.shippingEstimator = new ShippingEstimator($('[data-shipping-estimator]'));
     }
+
 }

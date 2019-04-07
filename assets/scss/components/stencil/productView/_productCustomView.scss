@@ -1,0 +1,122 @@
+// =============================================================================
+// PRODUCT CUSTOM VIEW (CSS)
+// =============================================================================
+
+
+// Product Description
+// -----------------------------------------------------------------------------
+
+
+.productView-brand {
+	color: #878b8c;
+	font: 14px 'Proxima-Nova-Bold';
+	margin-bottom: 0;
+	a {
+		text-decoration: none;
+	}
+}
+
+.productView-title {
+	color: #252525;
+	font: 24px 'Proxima-Nova-Regular';
+	margin: 0 0 13px;
+}
+
+.productView-rating {
+	margin-bottom: 10px;
+}
+
+.productView-info {
+	color: #878b8c;
+	font: 12px 'Proxima-Nova-Regular';
+	margin-bottom: 7px;
+	
+	.productView-stock {
+		color: #008e0b;
+		text-transform: capitalize;
+		margin-right: 30px;
+	}
+	.productView-info-name {
+		font: 12px 'Proxima-Nova-Regular';
+	}
+}
+
+.productView-CustomField {
+	color: #4f5253;
+	font: 700 14px 'Proxima-Nova-Regular';
+}
+
+.productView-reviewLink {
+	color: #666;
+	font-size: 13px;
+	vertical-align: bottom;
+	a {
+		color: $color-dark-blue;
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.productView-CategoryDesc {
+	color: #4f5253;
+	font: 14px/2 'Proxima-Nova-Regular';
+	p {
+		margin: 30px 0 35px 40px;
+	}
+}
+
+.productView-info-name-Delivery {
+	color: #878b8c;
+	font: 14px 'Proxima-Nova-Bold';
+	margin: 0 0 13px;
+	text-transform: uppercase;
+}
+
+.productView-price {
+
+	.price--withoutTax {
+		color: #004a8d;
+		font: 20px 'Proxima-Nova-Bold';
+	}
+	
+	.non-sale-price--withoutTax {
+		font-size: 12px;
+		color: #4f5253;
+	}
+}
+
+.form-label--alternate {
+	color: #252525;
+	font: 700 16px 'Proxima-Nova-Regular';
+	
+	.productView-SizesLink {
+		color: #006bb4;
+		font: 400 14px 'Proxima-Nova-Regular';
+		margin-left: 20px;
+		text-decoration: underline;
+		
+		&:visited {
+			color: #002f59;
+		}
+	}
+}
+
+// Product Size options
+// -----------------------------------------------------------------------------
+
+
+[data-product-attribute="set-rectangle"] .form-option {
+	text-align: center;
+	padding-top: 9px;
+	width: 30%;
+	height: 42px;
+}
+
+
+.fotorama__stage {
+	border: 1px solid #c8cdce;
+}
+

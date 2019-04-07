@@ -53,7 +53,7 @@
     @include breakpoint("large") {
         clear: right;
         float: right;
-        width: grid-calc(6, $total-columns);
+        width: grid-calc(12, $total-columns);
     }
 
     .productView-title {

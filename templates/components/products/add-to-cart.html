@@ -1,16 +1,16 @@
 {{#if theme_settings.show_product_quantity_box}}
     <div class="form-field form-field--increments">
-        <label class="form-label form-label--alternate"
+        <label class="form-label form-label--alternate form-label--Quantity"
                for="qty[]">{{lang 'products.quantity'}}</label>
             <div class="form-increment" data-quantity-change>
-                <button class="button button--icon" data-action="dec">
-                    <span class="is-srOnly">{{lang 'products.quantity_decrease'}}</span>
-                    <i class="icon" aria-hidden="true">
-                        <svg>
-                            <use xlink:href="#icon-keyboard-arrow-down"/>
-                        </svg>
-                    </i>
-                </button>
+                <!--<button class="button button&#45;&#45;icon" data-action="dec">-->
+                    <!--<span class="is-srOnly">{{lang 'products.quantity_decrease'}}</span>-->
+                    <!--<i class="icon" aria-hidden="true">-->
+                        <!--<svg>-->
+                            <!--<use xlink:href="#icon-keyboard-arrow-down"/>-->
+                        <!--</svg>-->
+                    <!--</i>-->
+                <!--</button>-->
                 <input class="form-input form-input--incrementTotal"
                        id="qty[]"
                        name="qty[]"
@@ -21,14 +21,14 @@
                        min="1"
                        pattern="[0-9]*"
                        aria-live="polite">
-                <button class="button button--icon" data-action="inc">
-                    <span class="is-srOnly">{{lang 'products.quantity_increase'}}</span>
-                    <i class="icon" aria-hidden="true">
-                        <svg>
-                            <use xlink:href="#icon-keyboard-arrow-up"/>
-                        </svg>
-                    </i>
-                </button>
+                <!--<button class="button button&#45;&#45;icon" data-action="inc">-->
+                    <!--<span class="is-srOnly">{{lang 'products.quantity_increase'}}</span>-->
+                    <!--<i class="icon" aria-hidden="true">-->
+                        <!--<svg>-->
+                            <!--<use xlink:href="#icon-keyboard-arrow-up"/>-->
+                        <!--</svg>-->
+                    <!--</i>-->
+                <!--</button>-->
             </div>
     </div>
 {{/if}}
@@ -41,7 +41,7 @@
 </div>
 {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
     <div class="form-action">
-        <input id="form-action-addToCart" data-wait-message="{{lang 'products.adding_to_cart'}}" class="button button--primary" type="submit"
+        <input id="form-action-addToCart" data-wait-message="{{lang 'products.adding_to_cart'}}" class="button button--primary add-to-cart-btn" type="submit"
             value="{{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}}{{lang 'products.add_to_cart'}}{{/if}}">
     </div>
      {{{snippet 'product_addtocart'}}}

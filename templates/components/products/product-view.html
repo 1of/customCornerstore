@@ -238,7 +238,7 @@
                 </div>
                 <div class="form-field form-field--stock{{#unless product.stock_level}} u-hiddenVisually{{/unless}}">
                     <label class="form-label form-label--alternate">
-                        {{lang 'products.current_stock'}}
+                        {{lang 'products.current_stock'}}g
                         <span data-product-stock>{{product.stock_level}}</span>
                     </label>
                 </div>
@@ -254,9 +254,16 @@
                 {{/if}}
             </form>
             {{#if settings.show_wishlist}}
-                {{> components/common/wishlist-dropdown}}
+                {{!> components/common/wishlist-dropdown}}
+            <a href="{{add_to_wishlist_url}}" class="add-to-wish-list">
+            </a>
             {{/if}}
+            <a href="{{add_to_wishlist_url}}" class="mailto-friend">
+            </a>
+            <a href="{{add_to_wishlist_url}}" class="share-toolbox">
+            </a>
         </div>
+        <a href="#" class="select-store-link">Select your store to check for pick up availability</a>
         {{> components/common/share}}
         {{{snippet 'product_details'}}}
     </section>

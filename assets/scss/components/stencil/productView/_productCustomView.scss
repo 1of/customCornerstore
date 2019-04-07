@@ -103,6 +103,129 @@
 		}
 	}
 }
+.form-field--increments {
+	.form-label--Quantity {
+		display: inline;
+		color: #4f5253;
+		font-size: 14px;
+		margin-right: 10px;
+		height: 35px;
+		vertical-align: middle;
+	}
+	.form-increment {
+		display: inline;
+	}
+	.form-input--incrementTotal {
+		border: 1px solid #c8cdce;
+		border-radius: 1px;
+		color: #4f5253;
+		font: 400 14px 'Proxima-Nova-Regular';
+		height: 35px;
+		padding: 0 2px;
+		width: 40px;
+	}
+
+}
+
+.productView-options {
+	.form-action {
+		.add-to-cart-btn {
+			background: $color-yellow;
+			border-radius: 50px;
+			color: $color-dark-blue;
+			font-size: 12px;
+			font-family: "Proxima-Nova-Bold";
+			font-weight: 700;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 12px 5px;
+			border-color: transparent;
+			height: 48px;
+			width: 215px;
+
+			@include breakpoint("medium") {
+				font-size: 14px;
+
+			}
+
+			&:hover {
+				color: $color-dark-blue;
+				background: #ffe980;
+			}
+		}
+	}
+
+	.add-to-wish-list {
+		width: 18px;
+		height: 18px;
+
+		svg {
+			fill: #878b8c;
+			height: 18px;
+			width: 18px;
+		}
+	}
+
+	.mailto-friend,
+	.share-toolbox,
+	.add-to-wish-list {
+		display: inline-block;
+		background-image: url(../img/social-share-icons-sprite.png);
+		height: 20px;
+		margin-left: 7px;
+
+	}
+
+	.add-to-wish-list {
+		background-position: 0 0;
+		width: 20px;
+	}
+
+	.mailto-friend {
+		background-position: 23px 0;
+		width: 22px;
+	}
+
+	.share-toolbox {
+		background-position: 62px 0;
+		width: 20px;
+	}
+}
+
+.select-store-link {
+	color: $color-dark-blue;
+	text-decoration: none;
+
+	&:visited,
+	&:hover{
+		color: #006bb4;
+		text-decoration: underline;
+	}
+}
+
+.specification-table {
+
+}
+
+.productView-description {
+	color: #4f5253;
+	font-family: 'Proxima-Nova-Regular';
+	font-size: 16px;
+
+	.tabs {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.tab.is-active .tab-title {
+		font-weight: 400;
+	}
+	
+	.tab-title {
+		font-size: 16px;
+	}
+}
 
 // Product Size options
 // -----------------------------------------------------------------------------

@@ -54,6 +54,7 @@
         clear: right;
         float: right;
         width: grid-calc(12, $total-columns);
+	    padding-bottom: spacing("double");
     }
 
     .productView-title {

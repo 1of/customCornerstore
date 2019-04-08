@@ -682,7 +682,7 @@
         "min_purchase_quantity": "Minimum Purchase:",
         "related_products": "Related Products",
         "top": "Most Popular Products",
-        "similar_by_views": "Customers Also Viewed",
+        "similar_by_views": "Recently viewed",
         "featured": "Featured Products",
         "file_option_set": "Currently: <a href=\"{url}\" target=\"_blank\">{name}</a>",
         "new": "New Products",

@@ -72,14 +72,13 @@
         {{/if}}
     </figure>
     <div class="card-body">
-        {{! log add_to_wishlist_url }}
-        {{#and rating show_rating}}
             <p class="card-text" data-test-info-type="productRating">
-                <span class="rating--small">
-                    {{> components/products/ratings rating=rating}}
-                </span>
+                {{#and rating show_rating}}
+                    <span class="rating--small">
+                        {{!> components/products/ratings rating=rating}}
+                    </span>
+                {{/and}}
             </p>
-        {{/and}}
             <p class="card-text brand-name" data-test-info-type="brandName">
                 {{#if brand.name}}
                     {{brand.name}}

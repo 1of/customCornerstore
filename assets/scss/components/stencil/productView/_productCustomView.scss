@@ -25,6 +25,18 @@
 .productView-rating {
 	margin-bottom: 10px;
 }
+.productView-details .productView-rating .icon {
+	height: 19px;
+	width: 22px;
+	margin-left: -4px;
+	
+	svg {
+		width: 26px;
+		height: 26px;
+	}
+
+}
+
 
 .productView-info {
 	color: #878b8c;
@@ -205,7 +217,11 @@
 }
 
 .specification-table {
-
+	text-align: left;
+	th {
+		padding: 5px 30px 10px 0;
+	}
+	
 }
 
 .productView-description {
@@ -217,15 +233,154 @@
 		display: flex;
 		justify-content: space-between;
 	}
-
+	.tab.is-active a{
+		outline: none;
+	}
 	.tab.is-active .tab-title {
 		font-weight: 400;
 	}
 	
 	.tab-title {
+		color: #4f5253;
 		font-size: 16px;
 	}
+	.tab-content {
+		color: #333333;
+		padding-top: 35px;
+	}
 }
+// Product Details Tab
+// -----------------------------------------------------------------------------
+
+#tab-description {
+	
+	.description-container {
+		display: flex;
+	}
+	.product-description,
+	.description-services {
+		width: 50%;
+	}
+	
+	.description-services {
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 20px;
+		padding-top: 5px;
+		height: 190px;
+		
+		.promo-item {
+			width: 50%;
+			margin-bottom: 35px;
+			height: 40px;
+		}
+		
+		.promo-item-logo {
+			display: inline-block;
+			height: 40px;
+			width: 40px;
+		}
+		.promo-item-content {
+			display: inline-block;
+			padding-left: 20px;
+			
+			a {
+				color: $color-dark-blue;
+				display: block;
+				text-decoration: none;
+				line-height: 20px;
+				
+				&:nth-child(1) {
+					font-size: 20px;
+					text-transform: uppercase;
+					font-weight: 600;
+				}
+				
+				&:hover {
+					text-decoration: underline;
+				  }
+			}
+		}
+	}
+	
+	.days-delivery {
+		background: url(../img/120-days.png);
+	}
+	.shipping {
+		background: url(../img/shipping.png);
+	}
+	.discount {
+		background: url(../img/discount.png);
+	}
+	.bed {
+		background: url(../img/bed.png);
+	}
+}
+
+// Recently Viewed Section
+// -----------------------------------------------------------------------------
+
+.recently-viewed {
+	background-color: #f3f3f3;
+	min-height: 496px;
+	
+	.page-heading {
+		font-size: 24px;
+		margin: 0;
+		padding: 30px 0 0;
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 79%;
+			height: 1px;
+			background: #4f5253;
+		}
+	}
+	
+	.card {
+		.free-delivery,
+		.tocart-container,
+		.brand-name {
+			display: none;
+		}
+		
+		.card-title a{
+			font-size: 14px;
+			color: #4f5253;
+		}
+		.card-title {
+			font-size: 14px;
+			font-family: 'Proxima-Nova-Bold';
+			margin-bottom: 15px;
+			height: auto;
+		}
+		.card-text {
+			font-size: 14px;
+		}
+		.card-body {
+			padding-top: 11px;
+		}
+	}
+	
+	.slick-next, 
+	.slick-prev {
+		background-color: #f3f3f3;
+		border-color: #f3f3f3;
+	}
+	.slick-dots {
+		display: none !important;
+	}
+	.tabs-contents {
+		margin-bottom: 0;
+	}
+	
+}
+@media  (max-width: 568px) {
+	.recently-viewed {
+		display: none;
+	}
+}
+
 
 // Product Size options
 // -----------------------------------------------------------------------------

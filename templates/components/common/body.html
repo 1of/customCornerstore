@@ -3,6 +3,11 @@
     <div class="container">
         {{#block "page"}} {{/block}}
     </div>
+
+    {{#if this.template_file '===' 'pages/product'}}
+        {{> components/products/recently-viewed-tabs}}
+    {{/if}}
+
     {{> components/common/modal}}
     {{> components/common/alert-modal}}
 </div>

@@ -124,6 +124,10 @@
 		color: #004a8d;
 		height: 57px;
 		font: 600 16px 'Proxima-Nova-Bold';
+		
+		&[data-test-info-type="productRating"] {
+			height: 0;
+		}
 	}
 
     @include breakpoint("small") {

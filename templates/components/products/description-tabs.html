@@ -10,18 +10,52 @@
             <a class="tab-title" href="#tab-warranty">{{lang 'products.warranty'}}</a>
         </li>
     {{/if}}
-    {{#all settings.show_product_reviews theme_settings.show_product_reviews_tabs product.reviews.total}}
+    {{!#all settings.show_product_reviews theme_settings.show_product_reviews_tabs product.reviews.total}}
         <li class="tab">
             <a class="tab-title productView-reviewTabLink" href="#tab-reviews">{{lang 'products.reviews.header' total=product.reviews.total}}</a>
         </li>
-    {{/all}}
+    {{!/all}}
 </ul>
 <div class="tabs-contents">
     <div class="tab-content is-active" id="tab-description">
-        {{{product.description}}}
-        {{{snippet 'product_description'}}}
+        <div class="description-container">
+            <div class="product-description">
+                {{{product.description}}}
+                {{{snippet 'product_description'}}}
+            </div>
+            <div class="description-services">
+                <div class="promo-item">
+                    <a href="#" class="promo-item-logo days-delivery"></a>
+                    <div class="promo-item-content">
+                        <a href="#">120 day</a>
+                        <a href="#">Price Promise</a>
+                    </div>
+                </div>
+                <div class="promo-item">
+                    <a href="#" class="promo-item-logo shipping"></a>
+                    <div class="promo-item-content">
+                        <a href="#">Free</a>
+                        <a href="#">Delivery</a>
+                    </div>
+                </div>
+                <div class="promo-item">
+                    <a href="#" class="promo-item-logo discount"></a>
+                    <div class="promo-item-content">
+                        <a href="#">0% APR</a>
+                        <a href="#">Financing for 5 Years*</a>
+                    </div>
+                </div>
+                <div class="promo-item">
+                    <a href="#" class="promo-item-logo bed"></a>
+                    <div class="promo-item-content">
+                        <a href="#">120 NIGHT</a>
+                        <a href="#">Comfort Promise</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="tab-content is-active" id="tab-specification">
+    <div class="tab-content" id="tab-specification">
         <table class="specification-table">
             <tr>
                 <th>Model</th> <td>FRS</td>
@@ -55,9 +89,9 @@
            {{{product.warranty}}}
        </div>
    {{/if}}
-   {{#all settings.show_product_reviews theme_settings.show_product_reviews_tabs}}
+   {{!#all settings.show_product_reviews theme_settings.show_product_reviews_tabs}}
        <div class="tab-content" id="tab-reviews">
            {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
        </div>
-   {{/all}}
+   {{!/all}}
 </div>

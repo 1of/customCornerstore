@@ -7,9 +7,7 @@
             {{> components/common/alert-success success}}
         {{/if}}
     {{/each}}
-
-    <section class="productView-images" data-image-gallery>
-
+    <section class="productView-images {{#if product.price.sale_price_without_tax}}sales-badge{{/if}}" data-image-gallery>
         <div
                 id="fotorama"
                 class="fotorama"
@@ -23,6 +21,7 @@
                     href="{{getImage this 'product_size' (cdn ../theme_settings.default_image_product)}}"
             <img data-sizes="auto" src="{{getImage this 'productview_thumb_size' (cdn ../theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}" class="productView-thumbnail lazyload">
             </a>
+
             {{/each}}
         </div>
 

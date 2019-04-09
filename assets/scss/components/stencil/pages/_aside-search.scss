@@ -15,7 +15,7 @@
 /* Style the search field */
 form.aside-search-bar {
 	input[type=search] {
-		border: 1px solid grey;
+		border: 1px solid #c8cdce;
 		border-radius: 15px;
 		font-size: 11px;
 		height: 30px;
@@ -23,13 +23,13 @@ form.aside-search-bar {
 		padding-right: 10px;
 		padding-top: 0;
 		outline: none;
-		width: 100%;
+		width: 97%;
 		
 	}
 	
 	button {
 		position: absolute;
-		right: -28px;
+		right: -19px;
 		top: 8px;
 		
 		svg{

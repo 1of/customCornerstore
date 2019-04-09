@@ -20,6 +20,7 @@
 
     @include breakpoint("small") {
         display: block; // 1
+	    margin-bottom: 0;
     }
 	
 }
@@ -28,6 +29,7 @@
     display: inline-block;
     float: none;
 	font-size: 12px;
+	line-height: 1;
 
     &.is-active {
 

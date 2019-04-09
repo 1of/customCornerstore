@@ -102,7 +102,12 @@
         <p class="free-delivery">Free Delivery!</p>
         <div class="tocart-container">
             {{#if add_to_cart_url }}
-            <a href="{{#replace "cart" add_to_cart_url}}checkout{{/replace}}" data-event-type="product-click" class="add-to-cart-btn">{{lang 'products.add_to_cart'}}</a>
+            <a href="{{add_to_cart_url}}" data-event-type="product-click" class="add-to-cart-btn">{{lang 'products.add_to_cart'}}</a>
+            <a href="{{add_to_wishlist_url}}" class="add-to-wish-list">
+                <svg><use xlink:href="#icon-black-heart" /></svg>
+            </a>
+            {{else}}
+            <a href="{{url}}" data-event-type="product-click" class="add-to-cart-btn">{{lang 'products.view_more'}}</a>
             <a href="{{add_to_wishlist_url}}" class="add-to-wish-list">
                 <svg><use xlink:href="#icon-black-heart" /></svg>
             </a>

@@ -16,6 +16,7 @@
     @include grid-row($behavior: "nest");
     font-size: 0; // 1
     margin-bottom: spacing("single");
+	padding: 0 11px;
 
     .product {
         @include grid-column(6, $float: none);

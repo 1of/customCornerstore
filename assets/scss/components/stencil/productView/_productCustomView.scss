@@ -76,7 +76,7 @@
 	color: #4f5253;
 	font: 14px/2 'Proxima-Nova-Regular';
 	p {
-		margin: 30px 0 35px 40px;
+		margin: 15px 0;
 	}
 }
 
@@ -256,10 +256,14 @@
 	
 	.description-container {
 		display: flex;
+		flex-wrap: wrap;
 	}
 	.product-description,
 	.description-services {
-		width: 50%;
+		width: 100%;
+		@include breakpoint('medium') {
+			width: 50%;
+		}
 	}
 	
 	.description-services {
@@ -270,9 +274,13 @@
 		height: 190px;
 		
 		.promo-item {
-			width: 50%;
+			width: 100%;
 			margin-bottom: 35px;
 			height: 40px;
+			
+			@include breakpoint('medium') {
+				width: 50%;
+			}
 		}
 		
 		.promo-item-logo {
@@ -387,14 +395,142 @@
 
 
 [data-product-attribute="set-rectangle"] .form-option {
+	font-weight: 700;
 	text-align: center;
 	padding-top: 9px;
 	width: 30%;
-	height: 42px;
+	height: 60px;
+	
+	@include breakpoint('small') {
+		height: 42px;
+	}
 }
 
+// Fotorama gallery custom styles
 
 .fotorama__stage {
 	border: 1px solid #c8cdce;
+}
+.fotorama__thumb-border {
+	border: 2px solid #ff5501 !important;
+}
+.fotorama__thumb {
+	border: 1px solid #c8cdce;
+}
+.fotorama__wrap--css3 .fotorama__nav__shaft {
+	margin-top: 8px;
+}
+.fotorama__nav__shaft {
+	float: left;
+}
+fotorama__wrap--no-controls {
+
+}
+.fotorama__wrap--css3.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:not(:focus) {
+	opacity: 0 !important;
+	transform: translate3d(32px, -32px, 0) !important;
+}
+.fotorama--fullscreen .fotorama__wrap--css3.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:not(:focus) {
+	opacity: 1 !important;
+	transform: translate3d(0, 0, 0) !important;
+}
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:focus {
+	opacity: 0 !important;
+	transform: translate3d(32px, -32px, 0) !important;
+}
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon {
+	opacity: 0 !important;
+	transform: translate3d(32px, -32px, 0);
+}
+.fotorama__wrap--css3 {
+	.fotorama__arr {
+		top: 17px;
+		width: 80px;
+		height: 100%;
+		
+		&.fotorama__arr--next {
+			background: url(../img/fotorama/arrow-right.png) no-repeat;
+			background-position: center;
+			background-color: rgba(255,255,255,0.9);
+			right: 0;
+		}
+		&.fotorama__arr--prev {
+			background: url(../img/fotorama/arrow-left.png) no-repeat;
+			background-position: center;
+			background-color: rgba(255,255,255,0.9);
+			left: 0;
+		}
+	}
+}
+
+.fotorama--fullscreen {
+	.fotorama__wrap--css3 {
+		.fotorama__fullscreen-icon {
+			width: 80px;
+			height: 80px;
+			background: url(../img/fotorama/custom_fotorama.png) no-repeat;
+			background-position: -70px -9px;
+		}
+		.fotorama__stage {
+			border-color: transparent;
+		}
+	}
+}
+.productView-images {
+	.show-sale-label {
+		left: 558px;
+		top: 45px;
+	}
+}
+
+.sales-badge {
+	.fotorama {
+		overflow: visible;
+	}
+	.fotorama__wrap {
+		&:before {
+			content: 'Sale';
+			color: $color-white;
+			font: 600 12px 'ErnestineWebProRegular';
+			line-height: 2;
+			text-align: center;
+			text-transform: uppercase;
+			display: block;
+			position: absolute;
+			right: -9px;
+			top: 10px;
+			width: 51px;
+			height: 24px;
+			background: rgb(39,126,205);
+			z-index: 100;
+		}
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			right: -5px;
+			top: 30px;
+			width: 0;
+			height: 0;
+			border-top: 6px solid transparent;
+			border-bottom: 6px solid transparent;
+			border-right:6px solid #4C568A;
+			transform: rotate(45deg);
+			z-index: 100;
+		}
+	}
+}
+
+.main {
+	margin-bottom: 120px;
+	.slick-dots {
+		display: none !important;
+	}
+}
+.heroCarousel {
+	.slick-arrow,
+	.slick-dots {
+		display: none !important;
+	}
 }
 

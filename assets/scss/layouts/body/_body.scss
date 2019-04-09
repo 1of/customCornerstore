@@ -21,6 +21,7 @@
     @include grid-row(
         $behavior: nest
     );
+	margin-top: 30px;
 }
 
 .page-content,

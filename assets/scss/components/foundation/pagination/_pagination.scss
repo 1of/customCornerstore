@@ -83,6 +83,7 @@
             }
 	        .icon svg {
 		        fill: #004a8d;
+		        margin-top: 4px;
 	        }
         }
     }
@@ -158,4 +159,8 @@
     .pagination-item--next {
         right: 0;
     }
+}
+
+.pagination {
+	margin-bottom: 60px;
 }

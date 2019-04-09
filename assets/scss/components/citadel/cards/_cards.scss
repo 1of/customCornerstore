@@ -299,7 +299,7 @@
 
 	.add-to-wish-list {
 		display: inline-block;
-		margin: auto 12px auto 0;
+		margin: auto 17px auto 0;
 		svg{
 			width: 17px;
 			height: 16px;
@@ -320,12 +320,14 @@
 	position: absolute;
 	right: -10px;
 	top: 10px;
+	z-index: 100;
+	
 	>.text {
 		color: $color-white;
 		font: 600 12px 'ErnestineWebProRegular';
 		text-transform: uppercase;
 		position: absolute;
-		right: 10px;
+		left: 10px;
 		line-height: 2;
 		
 	}

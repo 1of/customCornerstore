@@ -43,6 +43,15 @@
 	    color: #c8cdce;
         height: $input-small-height - remCalc($input-border-width * 2);
 	    padding-left: 10px;
+	    padding-top: 7px;
+	    font-size: 14px;
+	    font-family: 'Proxima-Nova-Regular';
+	    &::-ms-expand {
+		    display: none;
+	    }
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    background-image: none; //Disable dropdown arrow
     }
 
 	@include breakpoint("small") {
@@ -51,6 +60,9 @@
 }
 
 .actionBar {
+	padding: 0 15px;
+	margin: 0.75rem 0 3px 0;
+	
 	.pagination-items-count {
 		line-height: 2.2;
 		font-size: 14px;

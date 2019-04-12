@@ -351,7 +351,6 @@ export default class ProductDetails {
 
         // Prevent default
         event.preventDefault();
-
         $addToCartBtn
             .val(waitMessage)
             .prop('disabled', true);

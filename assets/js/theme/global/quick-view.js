@@ -7,7 +7,6 @@ import 'slick-carousel';
 import $ from 'jquery';
 import 'fotorama/fotorama.js';
 
-
 export default function (context) {
     const modal = defaultModal();
 
@@ -37,5 +36,4 @@ export default function (context) {
             return new ProductDetails(modal.$content.find('.quickView'), context);
         });
     });
-
 }

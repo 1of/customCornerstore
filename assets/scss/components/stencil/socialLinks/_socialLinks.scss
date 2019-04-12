@@ -9,6 +9,11 @@
 .socialLinks {
     @include clearfix;
     @include u-listReset; // 2
+	display: flex;
+	justify-content: center;
+	@include breakpoint('medium') {
+		justify-content: flex-start;
+	}
     line-height: lineHeight("largest");
 
     .icon { // 1

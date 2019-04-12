@@ -6,6 +6,7 @@ import $ from 'jquery';
 import '../../../../node_modules/jquery-ui/ui/widgets/accordion';
 
 export default class CustomPage extends PageManager {
+
     onReady() {
         $('#accordion').accordion({
             active: true, animate: false, collapsible: true, heightStyle: 'auto',

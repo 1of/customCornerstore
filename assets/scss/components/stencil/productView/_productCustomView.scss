@@ -136,6 +136,8 @@
 		padding: 0 2px;
 		width: 40px;
 	}
+	
+	
 
 }
 
@@ -203,6 +205,7 @@
 		background-position: 62px 0;
 		width: 20px;
 	}
+	
 }
 
 .select-store-link {
@@ -228,10 +231,25 @@
 	color: #4f5253;
 	font-family: 'Proxima-Nova-Regular';
 	font-size: 16px;
+	margin-bottom: 60px;
+	
+	@include breakpoint('medium') {
+		margin-bottom: 0;
+	}
 
 	.tabs {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		
+		@include breakpoint('small') {
+			justify-content: space-between;
+		}
+		
+		.tab {
+			border-top: none;
+			padding-right: 20px;
+		}
 	}
 	.tab.is-active a{
 		outline: none;
@@ -242,11 +260,26 @@
 	
 	.tab-title {
 		color: #4f5253;
-		font-size: 16px;
+		font-size: 14px;
+		text-transform: uppercase;
+		text-align: left;
+		
+		@include  breakpoint('medium') {
+			font-size: 16px;
+			font-family: 'Proxima-Nova-Regular';
+			margin-top: 0;
+			text-align: center;
+			text-transform: capitalize;
+		}
 	}
 	.tab-content {
 		color: #333333;
 		padding-top: 35px;
+	}
+	.warranty-text {
+		color: #004a8d;
+		font: 17px 'Proxima-Nova-Bold';
+		padding-left: 12px;
 	}
 }
 // Product Details Tab
@@ -451,13 +484,13 @@ fotorama__wrap--no-controls {
 		&.fotorama__arr--next {
 			background: url(../img/fotorama/arrow-right.png) no-repeat;
 			background-position: center;
-			background-color: rgba(255,255,255,0.9);
+			background-color: rgba(255,255,255,0.5);
 			right: 0;
 		}
 		&.fotorama__arr--prev {
 			background: url(../img/fotorama/arrow-left.png) no-repeat;
 			background-position: center;
-			background-color: rgba(255,255,255,0.9);
+			background-color: rgba(255,255,255,0.5);
 			left: 0;
 		}
 	}
@@ -533,4 +566,3 @@ fotorama__wrap--no-controls {
 		display: none !important;
 	}
 }
-

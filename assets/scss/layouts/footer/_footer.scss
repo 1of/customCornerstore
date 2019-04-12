@@ -421,8 +421,16 @@
 }
 
 .footer-info-col--newsletter {
+
 	.form {
-		margin-bottom: 0;
+		margin-bottom: 1px;
+		display: flex;
+		justify-content: center;
+		min-height: 42px;
+		
+		@include breakpoint('medium') {
+			justify-content: flex-start;
+		}
 		
 		.form-field {
 			margin-bottom: 1.5rem;
@@ -440,13 +448,12 @@
 		position: relative;
 		
 		@include breakpoint("medium") {
-			height: 38px;
 			width: 182px;
 			float: left;
 		}
 		
 		@include breakpoint("large") {
-			width: 247px;
+			width: 290px;
 			float: left;
 		}
 		
@@ -457,6 +464,7 @@
 			font-family: 'Proxima-Nova-Regular';
 			color: #878b8c;
 			padding: 0 20px;
+			height: 39px;
 			
 			@include breakpoint("medium") {
 				font-size: 11px;
@@ -479,14 +487,14 @@
 		
 		.footer-btn {
 			display: inline-block;
-			font-size: 12px;
+			font-size: 11px;
 			position: absolute;
 			right: 5px;
-			top: 5px;
+			top: 4px;
 			height: auto;
 			text-align: center;
 			margin: 0;
-			padding: 8px 22px;
+			padding: 7px 22px;
 			width: 75px;
 			vertical-align: top;
 			border-color: transparent;
@@ -502,10 +510,10 @@
 		.socialLinks-item:not(:last-child) {
 			margin-right: 4px;
 			@include breakpoint("medium") {
-				margin-right: 0;
-			}
-			@include breakpoint("medium") {
 				margin-right: 4px;
+			}
+			@include breakpoint("large") {
+				margin-right: 9px;
 			}
 		}
 		.icon {

@@ -259,12 +259,16 @@
             {{/if}}
             <a href="{{add_to_wishlist_url}}" class="mailto-friend">
             </a>
-            <a href="{{add_to_wishlist_url}}" class="share-toolbox">
+            <a class="share-toolbox addthis_inline_share_toolbox">
             </a>
         </div>
+
+
         <a href="#" class="select-store-link">Select your store to check for pick up availability</a>
         {{> components/common/share}}
         {{{snippet 'product_details'}}}
+
+
     </section>
 
     <article class="productView-description"{{#if schema}} itemprop="description"{{/if}}>
@@ -283,3 +287,7 @@
     <div class="modal-content"></div>
     <div class="loadingOverlay"></div>
 </div>
+
+{{> components/products/modals/sizes}}
+
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cb58070c160a07c"></script>

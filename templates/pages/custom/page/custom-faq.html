@@ -112,6 +112,60 @@
         </div>
     </section>
 </main>
+{{inject "Categories" categories}}
+{{#each categories}}
+{{log this}}
+{{/each}}
+<script>
+  // Note the lack of quotes around the jsContext handlebars helper, it becomes a string automatically.
+  var jsContext = JSON.parse({{jsContext}}); // jsContext would output "{\"myProductName\": \"Sample Product\"}" which can feed directly into your JavaScript
+  console.log(jsContext); // Will output: Sample Product
 
+</script>
+<script>
+  console.log('Cart Storefront API');
+  fetch('https://education5.mybigcommerce.com/api/storefront/carts', {
+    credentials: 'include'
+  }).then(function(response) {
+    return response.json();
+  }).then(function(myJson) {
+    let cartId = myJson[0].id;
+    console.log('cartId', myJson[0].id);
+
+    postData(`https://education5.mybigcommerce.com/api/storefront/carts/${cartId}/items`, {
+      "lineItems": [
+        {
+          "quantity": 1,
+          "productId": 121
+        }
+      ]}
+    )
+      .then(data => console.log("Responce after adding Item to cart", data))
+      .catch(error => console.error(error));
+  });
+
+
+
+  function postData(url = ``, cartItems = {}) {
+    return fetch(url, {
+      method: "POST",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json" },
+      body: JSON.stringify(cartItems),
+    })
+      .then(response => response.json());
+  };
+
+  var cartItems2 = {"id": '2dcab799-815e-45e5-b8b4-b6dcc2e6d78d'};
+  fetch('https://education5.mybigcommerce.com/api/storefront/checkouts/2dcab799-815e-45e5-b8b4-b6dcc2e6d78d', {
+    credentials: 'include',
+    method: "GET",
+  }).then(function(response) {
+    return response.json();
+  }).then(function(myJson) {
+    console.log("Checkout data: ", myJson);
+  });
+</script>
 {{/partial}}
 {{> layout/base}}

@@ -251,22 +251,30 @@
                         {{> components/common/alert-error (lang 'products.sold_out')}}
                     {{/if}}
                 {{/if}}
+                <div class="share-group">
+                    <div>
+                        <a href="{{#if add_to_wishlist_url}}{{add_to_wishlist_url}}{{else}}#{{/if}}" class="add-to-wish-list">
+                        </a>
+                        <a href="#" class="mailto-friend">
+                        </a>
+                        <a class="addthis_button_compact share-toolbox" href="#">
+                            <img src="{{cdn 'img/share-icon.jpg'}}"
+                                 width="22" height="19" border="0" alt="Share" />
+                        </a>
+                    </div>
+                </div>
             </form>
             {{#if settings.show_wishlist}}
                 {{!> components/common/wishlist-dropdown}}
-            <a href="{{add_to_wishlist_url}}" class="add-to-wish-list">
-            </a>
             {{/if}}
-            <a href="{{add_to_wishlist_url}}" class="mailto-friend">
-            </a>
-            <a class="share-toolbox addthis_inline_share_toolbox">
-            </a>
         </div>
 
 
         <a href="#" class="select-store-link">Select your store to check for pick up availability</a>
         {{> components/common/share}}
         {{{snippet 'product_details'}}}
+
+
 
 
     </section>
